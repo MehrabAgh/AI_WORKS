@@ -1,15 +1,20 @@
 from sklearn.model_selection  import train_test_split
-from sklearn.cluster import KMeans
-from sklearn.linear_model  import LinearRegression
 from sklearn.metrics import confusion_matrix
+
 from sklearn.impute import SimpleImputer
 
 from sklearn.preprocessing import OrdinalEncoder
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.model_selection import GridSearchCV
+
+from sklearn.compose import make_column_transformer
+from sklearn.pipeline import make_pipeline
 
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt   
 
 
 # add data for input
@@ -42,8 +47,26 @@ OH = OneHotEncoder()
 bb = OH.fit_transform(data_doller[['state']])
 
 LE = LabelEncoder()
-finalprice_data = LE.fit_transform(y=finalprice_data)
-print(finalprice_data)
+#encode
+finalprice_data = LE.fit_transform(y=finalprice_data) 
+#decode
 finalprice_data_dec = LE.inverse_transform(y=finalprice_data)
-print(finalprice_data_dec)
-# print(data_doller['state'].unique())
+
+
+minmax = MinMaxScaler()
+a = minmax.fit_transform(data_doller[['Reopening']])
+
+funcColumnTrans = make_column_transformer(
+    (OrdinalEncoder(categories='auto'), ['state']),
+    (OneHotEncoder() ,['state']),
+    remainder='passthrough' 
+)
+#most_frequent equil with mode
+funcPipline = make_pipeline(funcColumnTrans , SimpleImputer(strategy='most_frequent'))
+b = funcPipline.fit_transform(data_doller)
+
+
+plt.scatter(openprice_data ,finalprice_data )
+plt.show()
+print(b)
+

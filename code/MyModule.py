@@ -10,8 +10,7 @@ class myModule:
         return str()      
     
    def Counter(e): 
-       global ic
-       ic += e
+       global ic    
        
 
 myOBJ = myModule("Hi")

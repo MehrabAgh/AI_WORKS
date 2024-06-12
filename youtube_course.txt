@@ -1,0 +1,10 @@
+Data Analytics : 
+	https://www.youtube.com/watch?v=rGx1QNdYzvs&list=PLUaB-1hjhk8FE_XZ87vPPSfHqb6OcM0cF
+
+Machine Learning : 
+	https://www.youtube.com/watch?v=kz184QIO4ZQ&list=PLxCzCOWd7aiEXg5BV10k9THtjnS48yI-T
+
+Data : 
+	https://datasetsearch.research.google.com/
+	https://catalog.data.gov/dataset
+	https://www.kaggle.com/
