@@ -1,13 +1,16 @@
 from flask import Flask,request,url_for,render_template
 from markupsafe import escape
+from flask_sqlalchemy import SQLAlchemy
 
 # create object flask for start server
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = './upload_files'
+# app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite"
+# db = SQLAlchemy(app)
 
 # add route index for handling main page 
 @app.route("/")
-def homePage():            
+def homePage():      
     return f'''
     <b>hi web</b>
     <link rel='stylesheet' href='{url_for('static', filename='style.css')}'>
@@ -28,12 +31,13 @@ def aboutPage(name):
 
 # implement render template html file
 @app.route("/contact/<int:name>" , methods =["get","post"])
-def contactPage(name):    
+def contactPage(name): 
+    ld = [ {'name':'olive_type_1'} , {'value' : 'image resource'}]   
     if(request.method == "POST"):
         file = request.files['file']
         file.save(f'/upload_files/{file.name}')
         print(file)
-    return render_template('index.jinja',aa=name)
+    return render_template('index.jinja',aa=name , listdata = ld)
 
 # http request code and pass data
 @app.post('/login')

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />        
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+  </head>
+  <body style="background-color: rgb(5, 20, 1);">    
+  
+    <div class="frame" style="background-image:url('{{ url_for('static', filename='ABD.jpg')}}')">     
+      <div class="overlap">
+        <button class="rectangle">Home </button>
+        <button class="div">About Us</button>
+                
+        <div class="rectangle-2" style=" box-shadow: 2px 2px 15px 5px #2e2c2c;"></div>
+        <div class="rectangle-3"></div>
+        <form action="/" method="post" enctype="multipart/form-data" class="rectangle-4" style=" box-shadow: 2px 2px 15px 5px #000000;  display: flex;justify-content: center;align-items: center;">
+          <label style="color: bisque;margin-right: 15px; background-color: brown;" for="file-upload">select image</label>
+          <br/>          
+          <input style="border-color: #000000; border-width: 10px; border-radius: 2px;" name="image" type="file" id="file-upload" accept=".jpg,.jpeg,.png"/>          
+          {% if enable =='1' %}        
+          <img src="{{ url_for('static', filename= imageName)}}" id="output" style="width: 220px; height: 220px; box-shadow: 2px 2px 15px 5px #808080;">          
+          {% else: %}
+          <img id="output" style="width: 220px; height: 220px; box-shadow: 2px 2px 15px 5px #808080;">          
+          {% endif %}
+           <button  id="myElement" type="submit" class="rectangle-5">Process</button>
+        </form>
+        {%if(imageName != none):%}        
+        <p class="p">Image Name : {{imageName}}</p>
+        {%else:%}
+        <p class="p">Image Name : <span id="file-name"></span></p>
+        {%endif%}
+
+        <div class="text-wrapper-3">Image Size : 180*180</div>
+        <div class="text-wrapper-4">Algorithm usage : 
+        <select Name="Name_of_list_box" Size="Number_of_options">  
+          <option> CNN </option>            
+          {# <option> List item 3 </option>  
+          <option> List item N </option>   #}
+        </select> 
+        </div>                
+      </div>
+      {% if( enable == "1"):%}
+      <div id="ad" style="display: block;" class="overlap-group">
+        <div class="overlap-2">
+          <div class="rectangle-6"></div>
+          <p class="text-wrapper-6">Class Type : {{classType}}</p>
+          <div class="text-wrapper-7">Accuracy :{{acc}}%</div>
+          {# <div class="text-wrapper-8">Error : {{err}}%</div> #}
+          <div class="rectangle-7"></div>
+          <div class="rectangle-8"></div>
+        </div>
+        <button class="div-wrapper"><div class="text-wrapper-9">Heatmap</div></button>
+        <button class="overlap-3"><div class="text-wrapper-9">Bar chart</div></button>
+        <button class="overlap-4"><div class="text-wrapper-10">Scatter</div></button>
+        <button class="overlap-5"><div class="text-wrapper-11">Line chart</div></button>
+      </div>
+      {% endif %}
+    </div>
+    
+  </body>
+</html>
+
+<script>
+
+const fileInput = document.getElementById('file-upload');
+const imageOutput = document.getElementById('output');
+const fileNameElement = document.getElementById('file-name');
+const submitBtn = document.getElementById('myElement')
+
+submitBtn.style.display = 'none'
+fileInput.addEventListener('change', function(e) {
+  const fileName = e.target.files[0].name;
+  fileNameElement.textContent = fileName;
+});
+fileInput.addEventListener('change', function(e) {
+if (e.target.files.length > 0) {
+  const reader = new FileReader();
+  reader.onload = function(e) {    
+    imageOutput.src = e.target.result;
+    submitBtn.style.display = "block"
+    fetch("/",{
+      body:ee.target.result ,
+      method : 'POST'
+    }).then({}).catch({})    
+    imageOutput.style.backgroundImage="url(e.target.result)";
+  };
+  reader.readAsDataURL(e.target.files[0]);
+}  
+});
+</script>
+<style>
+  #file-upload {
+display: none; /* Hide the default input */
+}
+
+label[for="file-upload"] {
+background-color: #eee;
+padding: 10px;
+border-radius: 5px;
+cursor: pointer;
+display: block;
+}
+
+label[for="file-upload"]:hover {
+background-color: #ddd;
+}
+
+
+</style>

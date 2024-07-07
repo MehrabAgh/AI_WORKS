@@ -1,0 +1,331 @@
+.frame {
+  position: relative;
+  width: 912px;
+  height: 997px;
+  margin: auto;
+}
+
+.frame .overlap {
+  position: absolute;
+  width: 851px;
+  height: 482px;
+  top: 64px;
+  left: 26px;
+}
+
+.frame .rectangle {
+  position: absolute;
+  width: 160px;
+  height: 53px;
+  top: 0;
+  border-color: #ffffff;
+  left: 445px;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 8px;
+  font-size: large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.frame .div {
+  position: absolute;
+  width: 160px;
+  height: 53px;
+  top: 0;
+  border-color: #ffffff;
+  left: 270px;
+  background-color: #ffffff;
+  font-size: large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-radius: 8px;
+}
+
+.frame .text-wrapper {
+  position: absolute;
+  top: 16px;
+  left: 314px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.frame .text-wrapper-2 {
+  position: absolute;
+  top: 16px;
+  left: 502px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.frame .rectangle-2 {
+  position: absolute;
+  width: 851px;
+  height: 394px;
+  top: 40px;
+  left: 0;
+  background:linear-gradient(#5d6b2c,#2e3600);
+  border-radius: 20px;
+}
+
+.frame .rectangle-3 {
+  position: absolute;
+  width: 319px;
+  height: 178px;
+  top: 148px;
+  left: 432px;
+  background-color: #e3e3e3;
+}
+
+.frame .rectangle-4 {
+  position: absolute;
+  width: 361px;
+  height: 276px;
+  top: 99px;
+  left: 88px;
+  background-color: #ffffff;
+  border-radius: 5px;  
+}
+
+.frame .p {
+  position: absolute;
+  width: 246px;
+  top: 181px;
+  left: 478px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .text-wrapper-3 {
+  position: absolute;
+  width: 246px;
+  top: 221px;
+  left: 478px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .text-wrapper-4 {
+  position: absolute;
+  width: 246px;
+  top: 261px;
+  left: 478px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .rectangle-5 {
+  position: absolute;
+  width: 168px;
+  height: 60px;
+  top: 310px;
+  left: 240px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #2e5200;
+  border-radius: 28px;
+  border-color: #ffffff;
+  border-width: 0;
+  color: #ffffff;
+  font-size: 20px;
+  border-width: 5px;
+  
+}
+
+.frame .text-wrapper-5 {
+  position: absolute;
+  top: 441px;
+  left: 401px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.frame .overlap-group {
+  position: absolute;
+  width: 851px;
+  height: 394px;
+  top: 565px;
+  left: 26px;
+  background-color: #283302ee;
+}
+
+.frame .overlap-2 {
+  position: absolute;
+  width: 755px;
+  height: 302px;
+  top: 15px;
+  left: 22px;
+}
+
+.frame .rectangle-6 {
+  position: absolute;
+  width: 319px;
+  height: 178px;
+  top: 93px;
+  left: 436px;
+  background-color: #e3e3e3;
+}
+
+.frame .text-wrapper-6 {
+  position: absolute;
+  width: 246px;
+  top: 126px;
+  left: 472px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .text-wrapper-7 {
+  position: absolute;
+  width: 246px;
+  top: 166px;
+  left: 472px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .text-wrapper-8 {
+  position: absolute;
+  width: 246px;
+  top: 206px;
+  left: 472px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .rectangle-7 {
+  position: absolute;
+  width: 438px;
+  height: 302px;
+  top: 0;
+  left: 0;
+  background-color: #d9d9d9;
+}
+
+.frame .rectangle-8 {
+  position: absolute;
+  width: 412px;
+  height: 274px;
+  top: 14px;
+  left: 13px;
+  background-color: #888080;
+}
+
+.frame .div-wrapper {
+  position: absolute;
+  width: 103px;
+  height: 48px;
+  top: 328px;
+  left: 20px;
+  background-color: #d9d9d9;
+}
+
+.frame .text-wrapper-9 {
+  position: absolute;
+  top: 13px;
+  left: 17px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.frame .overlap-3 {
+  position: absolute;
+  width: 103px;
+  height: 48px;
+  top: 328px;
+  left: 133px;
+  background-color: #d9d9d9;
+}
+
+.frame .overlap-4 {
+  position: absolute;
+  width: 103px;
+  height: 48px;
+  top: 328px;
+  left: 245px;
+  background-color: #d9d9d9;
+}
+
+.frame .text-wrapper-10 {
+  position: absolute;
+  top: 13px;
+  left: 24px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.frame .overlap-5 {
+  position: absolute;
+  width: 103px;
+  height: 48px;
+  top: 328px;
+  left: 357px;
+  background-color: #d9d9d9;
+}
+
+.frame .text-wrapper-11 {
+  position: absolute;
+  top: 13px;
+  left: 14px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}

@@ -4,7 +4,11 @@
         <form method=post enctype="multipart/form-data" action="/contact/2">
             <input type="file" name=file type="png">
             <input type="submit">
-        </form>            
+        </form>  
+        {% for a in listdata %}          
+            <br/>        
+            <b>{{a.name}}</b>
+        {% endfor%}
     {{aa}}
     </body>
 </html>

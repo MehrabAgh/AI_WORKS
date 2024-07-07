@@ -11,3 +11,4 @@ NeuralNetwork & Deep Learning :
 	https://www.youtube.com/watch?v=Rmtr9SY-4VQ
 
 https://www.tensorflow.org/tutorials/keras/classification#preprocess_the_data
+
