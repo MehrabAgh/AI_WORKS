@@ -1,5 +1,5 @@
 import tensorflow as tf 
-from keras import Sequential , layers , Model
+from keras import Sequential , layers , Model , applications
 
 class_name = ['O_1' , 'O_2' , 'O_3'  ,'O_4' , 'O_5' ]
 img_w = 180
@@ -52,7 +52,7 @@ print("Finish Sequential ---->")
 
 
 # # ساختار مدل VGG16
-base_model_vgg = VGG16(weights='imagenet', include_top=False, input_shape=(img_w, img_h, 3))
+base_model_vgg = applications.VGG16(weights='imagenet', include_top=False, input_shape=(img_w, img_h, 3))
 x = base_model_vgg.output
 x = layers.GlobalAveragePooling2D()(x)
 x = layers.Dense(256, activation='relu')(x)
@@ -69,7 +69,7 @@ print("Finish VGG16 ---->")
 
 
 # # ساختار مدل ResNet50
-base_model_resnet = ResNet50(weights='imagenet', include_top=False, input_shape=(img_w, img_h, 3))
+base_model_resnet = applications.ResNet50(weights='imagenet', include_top=False, input_shape=(img_w, img_h, 3))
 x = base_model_resnet.output
 x = layers.GlobalAveragePooling2D()(x)
 x = layers.Dense(128, activation='relu')(x)
@@ -86,7 +86,7 @@ print("Finish ResNet50 ---->")
 
 
 # # ساخت مدل DenseNet
-base_model_densenet = DenseNet121(weights='imagenet', include_top=False, input_shape=(img_w, img_h, 3))
+base_model_densenet = applications.DenseNet121(weights='imagenet', include_top=False, input_shape=(img_w, img_h, 3))
 x = base_model_densenet.output
 x = layers.GlobalAveragePooling2D()(x)
 x = layers.Dense(128, activation='relu')(x)
@@ -104,7 +104,7 @@ print("Finish model_densenet--->")
 
 
 # # ساخت مدل MobileNet
-base_model_mobilenet = MobileNet(weights='imagenet', include_top=False, input_shape=(img_w, img_h, 3))
+base_model_mobilenet =applications.MobileNet(weights='imagenet', include_top=False, input_shape=(img_w, img_h, 3))
 x = base_model_mobilenet.output
 x = layers.GlobalAveragePooling2D()(x)
 x = layers.Dense(128, activation='relu')(x)
@@ -120,7 +120,7 @@ print("Finish model_mobilenet--->")
 
 
 # # ساخت مدل Xception
-base_model_xception = Xception(weights='imagenet', include_top=False, input_shape=(img_w, img_h, 3))
+base_model_xception = applications.Xception(weights='imagenet', include_top=False, input_shape=(img_w, img_h, 3))
 x = base_model_xception.output
 x = layers.GlobalAveragePooling2D()(x)
 x = layers.Dense(128, activation='relu')(x)
