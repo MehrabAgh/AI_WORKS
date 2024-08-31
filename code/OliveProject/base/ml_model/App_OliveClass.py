@@ -2,9 +2,11 @@ import tensorflow as tf
 import numpy as np
 import os
 import matplotlib.pyplot as plot
+import seaborn as sns
 
 img_w = 180
 img_h = 180
+class_name = ['O_1' , 'O_2' , 'O_3'  ,'O_4' , 'O_5' ]
 
 def ProcessImage(img):
     if(img):            
@@ -15,10 +17,9 @@ def ProcessImage(img):
         arrayImage = tf.keras.utils.array_to_img(inputImage)
         ImgAddDim = tf.expand_dims(arrayImage , axis=0)                
         
-        resultPred = NN_Model.predict(ImgAddDim) # type: ignore    
-        loss , acc  = NN_Model.evaluate(inputImage) # type: ignore    
-        # getScore = tf.nn.softmax(resultPred)      
+        resultPred = NN_Model.predict(ImgAddDim) # type: ignore            
+        getScore = tf.nn.softmax(resultPred)      
         classname = Olive_Category[np.argmax(resultPred)]
-        # acc = np.max(getScore)*100               
+        acc = np.max(getScore)*100                     
 
-    return {'err':loss , 'acc':acc, 'className': classname}
+    return {'err':0 , 'acc':acc, 'className': classname}

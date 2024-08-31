@@ -18,10 +18,7 @@
   width: 160px;
   height: 53px;
   top: 0;
-  border-color: #ffffff;
-  left: 445px;
-  background-color: #ffffff;
-  color: #000000;
+  left: 445px;    
   border-radius: 8px;
   font-size: large;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -31,10 +28,8 @@
   position: absolute;
   width: 160px;
   height: 53px;
-  top: 0;
-  border-color: #ffffff;
-  left: 270px;
-  background-color: #ffffff;
+  top: 0;  
+  left: 270px;  
   font-size: large;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   border-radius: 8px;

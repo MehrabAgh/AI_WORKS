@@ -8,8 +8,8 @@
   
     <div class="frame" style="background-image:url('{{ url_for('static', filename='ABD.jpg')}}')">     
       <div class="overlap">
-        <button class="rectangle">Home </button>
-        <button class="div">About Us</button>
+        <button class="rectangle" onclick=" window.location.href = '/'">Home </button>
+        <button class="div" onclick=" window.location.href = '/about'" >About Us</button>
                 
         <div class="rectangle-2" style=" box-shadow: 2px 2px 15px 5px #2e2c2c;"></div>
         <div class="rectangle-3"></div>
@@ -18,16 +18,16 @@
           <br/>          
           <input style="border-color: #000000; border-width: 10px; border-radius: 2px;" name="image" type="file" id="file-upload" accept=".jpg,.jpeg,.png"/>          
           {% if enable =='1' %}        
-          <img src="{{ url_for('static', filename= imageName)}}" id="output" style="width: 220px; height: 220px; box-shadow: 2px 2px 15px 5px #808080;">          
+          <img src="{{ url_for('static', filename='upload/'+imageName)}}" id="output" style="width: 220px; height: 220px; box-shadow: 2px 2px 15px 5px #808080;">          
           {% else: %}
           <img id="output" style="width: 220px; height: 220px; box-shadow: 2px 2px 15px 5px #808080;">          
           {% endif %}
            <button  id="myElement" type="submit" class="rectangle-5">Process</button>
         </form>
-        {%if(imageName != none):%}        
-        <p class="p">Image Name : {{imageName}}</p>
+        {%if((imageName|length) > 0):%}        
+        <p class="p">Image Name : {{imageName[:9]}}</p>
         {%else:%}
-        <p class="p">Image Name : <span id="file-name"></span></p>
+        <p class="p">Image Name : {{imageName}}</p>
         {%endif%}
 
         <div class="text-wrapper-3">Image Size : 180*180</div>
@@ -104,6 +104,10 @@ display: block;
 label[for="file-upload"]:hover {
 background-color: #ddd;
 }
-
+.rectangle{
+    border-color: #ffffff;
+    color: azure;
+    background-color: brown;
+}
 
 </style>

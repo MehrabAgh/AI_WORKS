@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />        
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+  </head>
+  <body style="background-color: rgb(5, 20, 1);">    
+  
+    <div class="frame" style="background-image:url('{{ url_for('static', filename='ABD.jpg')}}')">     
+         <div class="overlap">
+        <button class="rectangle" onclick=" window.location.href = '/'" >Home </button>
+        <button class="div" onclick=" window.location.href = '/about'" >About Us</button>
+
+        <div class="rectangle-2" style=" box-shadow: 2px 2px 15px 5px #2e2c2c;"></div>                            
+      </div>
+    </div>
+    
+  </body>
+</html>
+
+<style>
+.div{
+    border-color: #ffffff;
+    color: azure;
+    background-color: brown;
+}
+</style>
