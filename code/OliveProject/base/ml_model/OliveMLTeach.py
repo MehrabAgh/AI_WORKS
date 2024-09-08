@@ -1,5 +1,6 @@
 import tensorflow as tf 
 from keras import Sequential , layers , Model , applications
+import keras
 
 class_name = ['O_1' , 'O_2' , 'O_3'  ,'O_4' , 'O_5' ]
 img_w = 180
@@ -7,15 +8,15 @@ img_h = 180
 itrateLearn = 20
 
 def LOAD_DATASET(locateDB,w,h):
-    return tf.keras.utils.image_dataset_from_directory(
+    return keras.utils.image_dataset_from_directory(
     locateDB,
     shuffle = True,
     image_size=(w , h),
     batch_size=32,
     validation_split=False)
 
-loc_data_test = "../Model/Data/Dataset)olive/Test"
-loc_data_train = "../Model/Data/Dataset)olive/Train"
+loc_data_test = "../data/test"
+loc_data_train = "../data/train"
 Train_data = LOAD_DATASET(loc_data_train ,img_w,img_h) 
 Test_data = LOAD_DATASET(loc_data_test ,img_w,img_h) 
 
